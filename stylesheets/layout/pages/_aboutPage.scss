@@ -1,0 +1,9 @@
+.about-page-about {
+    display: grid;
+}
+
+h2 {
+    &.newHeading {
+        margin-top: 30px;
+    }
+}

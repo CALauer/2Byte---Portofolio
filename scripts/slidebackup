@@ -1,0 +1,40 @@
+const mobileSlideShow = () => {
+    loadFirstSlide()
+    setInterval(() => {
+        if (slide == 1) {
+            slideShow.fadeOut("slow")
+            slideShow.css('animation', "slide 1s")
+
+            setTimeout(() => {
+                slideShow.fadeIn()
+                slide = 2
+                slideHeader.html(`${slideTwo.header}`)
+                slideSubHeader.html(`${slideTwo.subheader}`)
+                slideMessage.html(`${slideTwo.message}`)
+                slideShow.append(`<img src="${slideTwo.image}" alt="${slideTwo.image}" />`)
+            }, 500);
+        } else if (slide == 2) {
+            slideShow.fadeOut()
+            setTimeout(() => {
+                slideShow.fadeIn()
+                slide = 3
+                slideHeader.html(`${slideThree.header}`)
+                slideSubHeader.html(`${slideThree.subheader}`)
+                slideMessage.html(`${slideThree.message}`)
+                slideShow.append(`<img src="${slideThree.image}" alt="${slideThree.image}" />`)
+            }, 500);
+        } else if (slide == 3) {
+            slideShow.fadeOut()
+            setTimeout(() => {
+                slideShow.fadeIn()
+                slide = 1
+                slideHeader.html(`${slideOne.header}`)
+                slideSubHeader.html(`${slideOne.subheader}`)
+                slideMessage.html(`${slideOne.message}`)
+                slideShow.append(`<img src="${slideOne.image}" alt="${slideOne.image}" />`)
+            }, 500);
+        } else {
+            return
+        }
+    }, 3000);
+}

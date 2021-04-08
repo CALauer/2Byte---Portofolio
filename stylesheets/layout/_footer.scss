@@ -1,0 +1,116 @@
+footer {
+    display: grid;
+    align-self: flex-end;
+    padding: 45px 1%;
+    color: $white;
+    background: black;
+    font-size: .9rem;
+    a {
+        color: $orange;
+    }
+    h1 {
+        margin: 20px 0px;
+    }
+}
+
+.three-columns-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    justify-self: center;
+    column-gap: 1%;
+    div {
+        display: grid;
+        justify-items: left;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: flex-start;
+        align-content: flex-start;
+        width: 100%;
+        ul {
+            padding-bottom: 20px;
+        }
+        li {
+            padding-top: 5px;
+        }
+        a {
+            color: $white;
+            &:hover {
+                color: $orange;
+            }
+        }
+        p {
+            color: $white;
+            &.note {
+                font-size: .7rem;
+                margin-bottom: 30px;
+                a {
+                    color: $orange;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-logo {
+    display: grid;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+@include responsive(small) {
+    footer {
+        padding: 50px 5%;
+    }
+    .three-columns-footer {
+        grid-template-columns: 1fr 1fr;
+        align-content: flex-start;
+        align-items: flex-start;
+        div {
+            justify-self: left;
+            justify-items: left;
+            justify-content: left;
+            &:nth-child(2),
+            &:nth-child(4) {
+                display: grid;
+                justify-self: right;
+                justify-items: right;
+                justify-content: right;
+                text-align: right;
+            }
+        }
+    }
+}
+
+@include responsive(large) {
+    footer {
+        padding: 70px 15%;
+    }
+    .three-columns-footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-content: flex-start;
+        align-items: flex-start;
+        div {
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            align-items: flex-start;
+            text-align: center;
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: grid;
+                justify-self: center;
+                justify-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            ul li {
+                padding: 0px 0px 20px 0px;
+            }
+        }
+    }
+}

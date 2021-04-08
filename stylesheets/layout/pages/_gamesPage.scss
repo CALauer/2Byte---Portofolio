@@ -1,0 +1,49 @@
+.games-page-games {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    row-gap: 100px;
+    column-gap: 20px;
+    padding-bottom: 40px;
+    div {
+        display: grid;
+        justify-self: center;
+        width: 250px;
+        height: 300px;
+        border: 1px solid $orange;
+        transition: 100ms ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+    }
+    &.games {
+        color: $orange;
+    }
+}
+
+.games-page-launcher {
+    display: grid;
+    grid-template-columns: 1fr;
+    h3 {
+        margin-top: 20px;
+        color: $orange;
+    }
+    img {
+        display: none;
+        padding: 40px 0px;
+    }
+}
+
+@include responsive(small) {
+    .games-page-launcher {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        h3 {
+            color: $orange;
+        }
+    }
+}
+
+@include responsive(large) {}

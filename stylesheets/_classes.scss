@@ -1,0 +1,98 @@
+.white {
+    color: $white;
+}
+
+.orange {
+    color: $orange;
+}
+
+.center {
+    justify-self: center;
+}
+
+.fadeIn {
+    opacity: 0;
+    transform: translate(0px, 20px);
+    transition: transform 800ms ease-in, opacity 800ms ease-in;
+    &.appear {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        animation: fadeIn 1s ease-in, transform 3s ease-in;
+    }
+}
+
+// Buttons
+// HEADER BUTTON ONLY 
+.btn-style-one {
+    display: grid;
+    margin-top: 35px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px 35px 15px 35px;
+    border: 2px solid $white;
+    border-radius: 55px;
+    transition: 300ms ease-in-out;
+    &:hover {
+        background: transparent;
+        border: 2px solid $orange;
+        color: $orange;
+    }
+}
+
+.btn-style-two {
+    display: grid;
+    color: white;
+    margin-top: 30px;
+    padding: 20px 35px 20px 35px;
+    text-decoration: none;
+    background: $orange;
+    width: max-content;
+    font-weight: 600;
+    font-size: .9rem;
+    transition: 200ms ease-in-out;
+    &:hover {
+        background: rgba($color: #ebad03, $alpha: 1);
+    }
+}
+
+.btn-style-three {
+    display: grid;
+    margin-top: 20px;
+    justify-self: center;
+    color: white;
+    padding: 15px 35px 15px 35px;
+    text-decoration: none;
+    background: $orange;
+    width: max-content;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 200ms ease-in-out;
+    box-shadow: $box-shadow;
+    &:hover {
+        background: rgba($color: #ebad03, $alpha: 1)
+    }
+}
+
+.login-btn {
+    display: inline-grid;
+    color: $white;
+    font-size: .7rem;
+    width: min-content;
+    background: black;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    &:hover {
+        background: transparent;
+        border: 1px solid $orange;
+    }
+}
+
+.register-link {
+    font-size: .8rem;
+    font-weight: 500;
+}

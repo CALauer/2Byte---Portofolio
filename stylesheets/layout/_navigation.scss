@@ -1,0 +1,112 @@
+@import '../variables';
+nav {
+    display: grid;
+    position: fixed;
+    width: 100%;
+    align-items: flex-start;
+    box-shadow: 0px 2px 4px rgba($color: $black, $alpha: .8);
+    z-index: 3;
+    a {
+        color: $black;
+        font-weight: 600;
+    }
+}
+
+.mobile-nav {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: $navPadding;
+    grid-template-columns: $one-one-columns;
+    background-color: $white;
+    z-index: 10;
+    div:nth-child(1) {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        align-content: center;
+        justify-items: left;
+        justify-self: left;
+    }
+    div:nth-child(2) {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        justify-items: right;
+        justify-content: right;
+        align-items: center;
+    }
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 51px;
+    width: 100%;
+    padding: 40px;
+    background: $white;
+    z-index: 100;
+    ul {
+        display: grid;
+    }
+    li {
+        display: grid;
+        align-items: center;
+    }
+    a {
+        font-size: 1rem;
+        color: $white;
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-align: center;
+        color: $black;
+    }
+}
+
+@include responsive(small) {
+    .mobile-nav {
+        display: none;
+    }
+    .desktop-nav {
+        display: grid;
+        width: 100%;
+        height: 60px;
+        padding: $navPadding;
+        grid-template-columns: $one-three-columns;
+        background-color: $white;
+        z-index: 10;
+        div:nth-child(1) {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            align-content: center;
+            justify-items: left;
+            justify-self: left;
+        }
+        div:nth-child(2) {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            justify-items: right;
+            justify-content: right;
+            align-items: center;
+            ul {
+                display: inline;
+            }
+            li {
+                display: inline;
+                padding-right: 20px;
+                a {
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}

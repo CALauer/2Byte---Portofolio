@@ -1,0 +1,45 @@
+@import './variables';
+@import './queries';
+@import './svgs';
+@import './layout/navigation';
+@import './layout/header';
+@import './layout/sections';
+@import './layout/footer';
+@import './layout/pages/gamesPage';
+@import './layout/pages/aboutPage';
+@import './classes';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+     ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    width: 100vw;
+    // background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    overflow: -moz-scrollbars-none;
+     ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto, 1fr, 200px;
+}
+
+@include responsive(small) {}
+
+@include responsive(medium) {}
+
+@include responsive(large) {}

@@ -1,0 +1,41 @@
+#gitHubIcon {
+    height: 35px;
+    vertical-align: middle;
+    transition: 200ms;
+    &:hover {
+        cursor: pointer;
+        #icon {
+            transition: 200ms;
+            fill: $orange;
+        }
+    }
+}
+
+// DONE
+#twoByteLogo {
+    height: 25px;
+    transition: 200ms;
+    #number {
+        transition: 200ms;
+    }
+    &:hover,
+    &:focus {
+        fill: $orange;
+        cursor: pointer;
+        #number {
+            fill: $black;
+            cursor: pointer;
+        }
+    }
+}
+
+#hamburger-icon {
+    display: grid;
+    vertical-align: middle;
+    height: 25px;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        fill: orange;
+    }
+}
